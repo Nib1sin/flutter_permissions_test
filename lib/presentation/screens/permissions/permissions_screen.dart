@@ -36,7 +36,7 @@ class _PermissionsView extends ConsumerWidget {
           },
         ),
 
-/*
+
         CheckboxListTile(
           value: permissions.photoLibraryGranted, 
           title: const Text('Galería de fotos'),
@@ -63,8 +63,6 @@ class _PermissionsView extends ConsumerWidget {
             ref.read(permissionsProvider.notifier).requestSensorsAccess(); 
           },
         ),
-*/
-
 
 
       ],

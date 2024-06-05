@@ -30,9 +30,11 @@ class MainAppState extends ConsumerState<MainApp> with WidgetsBindingObserver{
     WidgetsBinding.instance.removeObserver(this);
   }
 
-   @override
+  @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     ref.read( appStateProvider.notifier ).state = state;
+
+    //Autodectar los permisos, si ya ha sido activado recalculo el estado del permiso
     if ( state == AppLifecycleState.resumed ) {
       ref.read( permissionsProvider.notifier ).checkPermissions();
     }
